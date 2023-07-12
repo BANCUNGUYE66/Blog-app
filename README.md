@@ -90,7 +90,7 @@ To test the web app run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Innocent N.**
+👤 **Aimable BANCUNGUYE**
 
 - GitHub: [@bancunguye66](https://github.com/bancunguye66)
 - Twitter: [@bancunguye66](https://twitter.com/bancunguye66)
