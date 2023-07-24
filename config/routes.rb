@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/recede_historical_location', to: 'navigation#recede'
+  get '/resume_historical_location', to: 'navigation#resume'
+  get '/refresh_historical_location', to: 'navigation#refresh'
+  post '/rails/action_mailbox/mailgun/inbound_emails/mime', to: 'action_mailbox/ingresses/mailgun/inbound_emails#create'
 end
