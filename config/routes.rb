@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # Users routes
+  get '/users', to: 'users#index'
+  get '/users/:id', to: 'users#show', as: 'user'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # Posts routes
+  get '/posts', to: 'posts#index'
+  get '/posts/:id', to: 'posts#show', as: 'post'
 end
