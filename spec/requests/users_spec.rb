@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User, type: :request do
+RSpec.describe User, type: :request do
   describe 'routes with user_controller' do
     it 'should render the index action correctly' do
       get '/users'

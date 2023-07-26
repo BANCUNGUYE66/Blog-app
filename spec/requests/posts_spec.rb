@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Post, type: :request do
+RSpec.describe Post, type: :request do
   describe 'routes with post_controller' do
     it 'should render the index action correctly' do
       get '/users/1/posts'
