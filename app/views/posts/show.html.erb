@@ -6,5 +6,7 @@
     <div class='post-count-best'>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></div>
   </div>
   <div><%= @post.text %></div>
-  <%= render 'partials/comment', comments: @post.recent_comments %>
+  <% @post.comments.each do |comment| %>
+    <%= render 'partials/comment', comment: comment %>
+  <% end %>
 </article>
