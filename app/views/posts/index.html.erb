@@ -1,1 +1,14 @@
 <h1>List of Posts</h1>
+<%= render 'partials/user', user: @user %>
+<% if @posts.empty? %>
+  <p class='no-posts'>No posts</p>
+<% else %>
+<% @posts.each do |post|%>
+  <%= render 'partials/post', post: post %>
+  <div class="comment-container">
+  <% post.recent_comments.reverse_each do |comment| %>
+    <%= render 'partials/comment', comment: comment %>
+  <% end %>
+</div>
+<%end%>
+<%end%>
