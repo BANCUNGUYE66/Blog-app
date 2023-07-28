@@ -1,14 +1,23 @@
-<h1>List of Posts</h1>
+<h1>Blog App</h1>
+
 <%= render 'partials/user', user: @user %>
-<% if @posts.empty? %>
-  <p class='no-posts'>No posts</p>
-<% else %>
-<% @posts.each do |post|%>
-  <%= render 'partials/post', post: post %>
-  <div class="comment-container">
-  <% post.recent_comments.reverse_each do |comment| %>
-    <%= render 'partials/comment', comment: comment %>
+<main class="post-index">
+  <% @posts.reverse_each do |post| %>
+    <div class="post-details">
+      <%= render 'partials/post', post: post %>
+
+      <div>
+        <%= link_to "Add Comment", new_user_post_comment_path(@user, post), class: 'add_comment' %>
+        <%= form_with url: user_post_likes_path(post.author.id, post.id) do |form| %>
+          <%= form.submit 'Like', class: 'like_btn' %>
+        <% end %>
+      </div>
+
+      <div class="comment-container">
+        <% post.return_five_most_recent_comments.reverse_each do |comment| %>
+          <%= render 'partials/comment', comment: comment %>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-</div>
-<%end%>
-<%end%>
+</main>
