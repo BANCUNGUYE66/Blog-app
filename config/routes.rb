@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  # Users routes
   root 'users#index'
 
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+    resources :posts, only: [:index, :show, :new, :create] do
+      resources :likes, only: [:create]
+      resources :comments, only: [:new, :create]
+    end
   end
 end
