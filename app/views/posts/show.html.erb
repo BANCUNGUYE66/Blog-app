@@ -5,6 +5,12 @@
     <div class="post-in-show2">
       <h3><%= @post.title %> by <%= @post.author.name %></h3>
       <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+
+      <div>
+        <%= form_with url: user_post_likes_path(@post.author, @post), method: :post do |form| %>
+          <%= form.submit 'Like', class: 'like_btn' %>
+        <% end %>
+      </div>
     </div>
     <p><%= @post.text %></p>
   </div>
