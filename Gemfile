@@ -3,12 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
+# RSpec testing library
+
+gem 'rspec-support'
+gem 'shoulda-matchers', '~> 5.0'
+
+# Rubocop linter library
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'sassc'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.5'
+gem 'rails', '~> 7.0.4'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -30,6 +34,8 @@ gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
+
+gem 'will_paginate'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -55,6 +61,8 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -74,9 +82,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-group :development, :test do
-  gem 'factory_bot_rails' # For creating test objects
-  gem 'rspec-rails'
-  gem 'shoulda-matchers' # For validation matchers
-end
-gem 'rails-controller-testing'

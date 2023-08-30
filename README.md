@@ -96,6 +96,11 @@ To test the web app run the following command:
 - Twitter: [@bancunguye66](https://twitter.com/bancunguye66)
 - LinkedIn: [Aimable BANCUNGUYE](https://www.linkedin.com/in/aimable-bancunguye/)
 
+👤Amarachi Dimkpa
+
+- GitHub: [@amazinggacee](https://github.com/Amazinggracee)
+- Twitter: [@amazinggaceu](https://twitter.com/amazinggraceu)
+- LinkedIn: [Amarachi Dimkpa](https://linkedin.com/in/amarachi-dimkpa)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
