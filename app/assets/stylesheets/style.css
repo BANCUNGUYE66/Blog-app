@@ -37,16 +37,20 @@ a {
   grid-template-columns: 1fr 4fr;
   grid-gap: 30px;
   width: 80%;
-  margin: auto;
-  margin-bottom: 20px;
-  height: 90px;
   cursor: pointer;
+  margin: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 176px;
 }
 
 .post-index,
 .user-cont2 {
   width: 80%;
   margin: auto;
+  padding: 10px;
 }
 
 .profile {
@@ -63,11 +67,16 @@ a {
 h2 {
   font-size: 26px;
   margin: 0 0 5px 20px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .user-post-total {
   text-align: right;
   margin: 0 20px 5px 0;
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
 }
 
 .bio {
@@ -176,4 +185,107 @@ h2 {
   justify-content: space-between;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+/* Style the user's name */
+.user-content-details h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style the link (assuming it's a link) */
+.user-content-details a {
+  text-decoration: none;
+  color: #007bff; /* Change to your desired link color */
+}
+
+/* Hover effect for the link */
+.user-content-details a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Change to your desired link hover color */
+}
+
+/* Style the form container */
+form {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Style form labels and fields */
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the password hint */
+.field em {
+  font-style: italic;
+  color: #666;
+}
+
+/* Style the actions section (e.g., submit button) */
+.actions {
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Style the cancel account section */
+h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style the cancel account button */
+button[type="submit"] {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #c82333;
+}
+
+/* Style the back link */
+a.back-link {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+a.back-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
 }
