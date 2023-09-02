@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @current_user = current_user
   end
 
-  #show the rescent post.
+  # show the rescent post.
   def show
     @user = User.find(params[:id])
     @recent_posts = @user.return_three_most_recent_posts
